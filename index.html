@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizTime</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div id="start-screen">
+            <h2>🎯 Welcome to QuizTime!</h2>
+            <p>Test your knowledge and see how many you can score.</p>
+            <button id="start-btn" onclick="startQuiz()">Start Quiz 🚀</button>
+        </div>
+
+        <div id="quiz-box" style="display:none;">
+            <h3 id="progress"></h3>
+            <p id="question"></p>
+            <div id="options"></div>
+            <button id="next-btn" onclick="nextQuestion()">Next ➜</button>
+        </div>
+
+        <div id="result-box" style="display:none;">
+            <h2>🏁 Quiz Completed!</h2>
+            <h3 id="score"></h3>
+            <button onclick="restartQuiz()">🔄 Restart Quiz</button>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
