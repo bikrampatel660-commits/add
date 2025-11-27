@@ -3,33 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuizTime</title>
+    <title>ClubJoin - College Club Registration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="page-header">
+        <div class="header-content">
+            <h1>ClubJoin</h1>
+            <p>Your gateway to college life and community!</p>
+        </div>
+    </header>
 
     <div class="container">
+        
+        <section id="registration-form" class="card">
+            <h2>✨ Register for a College Club</h2>
+            <form id="clubRegistrationForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Jane Doe">
+                    </div>
 
-        <div id="start-screen">
-            <h2>🎯 Welcome to QuizTime!</h2>
-            <p>Test your knowledge and see how many you can score.</p>
-            <button id="start-btn" onclick="startQuiz()">Start Quiz 🚀</button>
-        </div>
+                    <div class="form-group">
+                        <label for="department">Department:</label>
+                        <select id="department" name="department" required>
+                            <option value="">-- Select Department --</option>
+                            <option value="CS">Computer Science</option>
+                            <option value="EE">Electrical Engineering</option>
+                            <option value="ME">Mechanical Engineering</option>
+                            <option value="Arts">Arts & Humanities</option>
+                        </select>
+                    </div>
+                </div>
 
-        <div id="quiz-box" style="display:none;">
-            <h3 id="progress"></h3>
-            <p id="question"></p>
-            <div id="options"></div>
-            <button id="next-btn" onclick="nextQuestion()">Next ➜</button>
-        </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="jane.doe@college.edu">
+                    <small id="email-error" class="error-message"></small>
+                </div>
 
-        <div id="result-box" style="display:none;">
-            <h2>🏁 Quiz Completed!</h2>
-            <h3 id="score"></h3>
-            <button onclick="restartQuiz()">🔄 Restart Quiz</button>
-        </div>
+                <div class="form-group">
+                    <label for="club">Club Choice:</label>
+                    <select id="club" name="club" required>
+                        <option value="">-- Select Club --</option>
+                        <option value="Robotics">🤖 Robotics Club</option>
+                        <option value="Debate">🗣️ Debate Society</option>
+                        <option value="Music">🎶 Music & Arts Club</option>
+                        <option value="Sports">🏅 Intramural Sports</option>
+                    </select>
+                    <small id="club-error" class="error-message"></small>
+                </div>
+
+                <button type="submit" class="cta-button">Join Club!</button>
+            </form>
+        </section>
+
+        <section id="registered-students-list" class="card list-section">
+            <h2>👥 Current Registrations</h2>
+            <ul id="studentList">
+                <li class="no-students">No students registered yet. Be the first!</li>
+            </ul>
+        </section>
     </div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
